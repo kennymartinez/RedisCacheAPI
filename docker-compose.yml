@@ -1,6 +1,4 @@
-version: "3.8"
-
-services:
+﻿services:
   redis:
     image: "redis:latest"
     ports:
@@ -8,13 +6,14 @@ services:
     networks:
       - redis-network
 
-  redis-cache-api:
-    image: "redis-cache-api:latest" # Replace with your actual image name
+  rediscacheapi:
+    image: rediscacheapi
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "5001:80"
+      - "5002:443"
     depends_on:
       - redis
     networks:

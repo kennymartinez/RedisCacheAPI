@@ -22,13 +22,13 @@ services:
       RESHARPER_LOG_CONF: "/etc/opt/rider-debugger/backend-log.xml"
     image: "rediscacheapi:dev"
     ports:
-    - "127.0.0.1:57009:57100"
-    - "127.0.0.1:57209:57300"
+    - "127.0.0.1:57010:57100"
+    - "127.0.0.1:57210:57300"
     volumes:
     - "/Users/kenny/.nuget/packages:/root/.nuget/packages"
     - "/Users/kenny/code/redis-practice/RedisCacheApi:/app:rw"
     - "/Users/kenny/code/redis-practice/RedisCacheApi:/src:rw"
     - "/Users/kenny/.local/share/JetBrains/RiderRemoteDebugger/2023.3.2/LinuxArm64:/opt/rider-debugger"
     - "/Applications/Rider.app/Contents/bin:/etc/opt/rider-debugger/backend-log.xml"
-    - "/Users/kenny/Library/Logs/JetBrains/Rider2023.3/DebuggerWorker/JetBrains.Debugger.Worker.2024_2_02_13_00_45:/var/opt/rider-debugger:rw"
+    - "/Users/kenny/Library/Logs/JetBrains/Rider2023.3/DebuggerWorker/JetBrains.Debugger.Worker.2024_2_02_13_27_13:/var/opt/rider-debugger:rw"
     working_dir: "/app"
